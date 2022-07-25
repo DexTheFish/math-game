@@ -19,13 +19,16 @@ class Game
     end
   end
 
+  def print_score
+    puts "P1: #{player1.lives}/3  vs  P2: #{player2.lives}/3"
+  end
+
   def turn
     puts "--- New Turn ---"
     question = Question.new
-    guess = question.ask(@current_player)
-
-
-    self.change_player
+    question.ask(@current_player)
+    print_score
+    change_player
   end
 end
 

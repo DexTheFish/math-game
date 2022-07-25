@@ -3,19 +3,19 @@ require "./game"
 require "./player"
 
 
-if false
+if false #player tests
   puts "---- player tests ----"
   player1 = Player.new
   p player1
 end
 
-if false
+if false #question test
   puts "---- question tests ----"
   question1 = Question.new
   puts question1.answer
 end
 
-if true
+if false #game tests
   puts "---- game tests ----"
   new_game = Game.new
 
@@ -28,4 +28,15 @@ if true
 
   puts "turn should ask current_player a question: "
   new_game.turn
+
+end
+
+puts "--- welcome to the Math Game! ---"
+
+game = Game.new
+i = 0 # to prevent inf loops during development
+
+while game.player1.lives > 0 and game.player2.lives > 0 and i < 1000
+  i += 1
+  game.turn
 end
