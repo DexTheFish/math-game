@@ -16,7 +16,4 @@ class Question
       player.lose_life
     end
   end
-
-
-
 end

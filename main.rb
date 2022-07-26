@@ -11,6 +11,3 @@ while game.player1.alive and game.player2.alive
 end
 
 game.end
-
-
-

@@ -38,4 +38,3 @@ class Game
     puts "----------- GAME OVER -----------\n            Good Bye!"
   end
 end
-
