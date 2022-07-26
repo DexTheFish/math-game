@@ -20,31 +20,24 @@ class Game
   end
 
   def print_score
-    puts "P1: #{player1.lives}/3  vs  P2: #{player2.lives}/3"
+    puts "   P1: #{player1.lives}/3 ------------  P2: #{player2.lives}/3 \n"
   end
 
-  def turn
-    puts "--- New Turn ---"
+  def turn # process question, print score, change player
+    puts "------------ New Turn ------------"
     question = Question.new
     question.ask(@current_player)
     print_score
     change_player
   end
+
+  def end # declare winner and final score
+    if player1.alive
+      puts "Player 1 is victorious with a score of #{player1.lives}/3"
+    else
+      puts "Player 2 is victorious with a score of #{player2.lives}/3"
+    end
+    puts "----------- GAME OVER -----------\n            Good Bye!"
+  end
 end
 
-
-# main loop: runs until either player reaches 0 lives
-=begin
-    - display 'new turn' message
-    - generate a question
-    - display it to current_player
-    - ask for user-input
-    - Correct:
-      - display 'correct' message
-    - Incorrect:
-      - display 'incorrect' message
-      - deduct a life from 'current player'
-    - toggle current_player
-    - display current lives remaining*
-    - check for lives = 0
-=end
