@@ -1,8 +1,6 @@
 require "./player"
 require "./question"
 
-
-# contain the game loop
 class Game
   attr_accessor :current_player, :player1, :player2
   def initialize
